@@ -1,0 +1,184 @@
+.page {
+  background-color: var(--color-background);
+}
+
+.hero {
+  position: relative;
+  background-color: #16166d;
+  min-height: 520px;
+  overflow: hidden;
+}
+
+/* ==== Empty background image slot ====
+   To add a photo later:
+   1. Put the image file in src/assets/ (e.g. src/assets/hero-bg.jpg)
+   2. Import it at the top of Home.jsx:  import heroBg from '../../assets/hero-bg.jpg';
+   3. Pass it as an inline style on this div in Home.jsx:
+      <div className={styles.heroBackground} style={{ backgroundImage: `url(${heroBg})` }} />
+   Until then, this stays empty and just shows the dark background color. */
+.heroBackground {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+/* Dark gradient overlay on top of the background image so text
+   and product cards stay readable no matter how bright the photo is */
+.heroBackground::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to left,
+    rgba(20, 20, 22, 0.75) 0%,
+    rgba(20, 20, 22, 0.92) 100%
+  );
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 60px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* ==== Text block (right side) ==== */
+.textBlock {
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgba(10, 10, 12, 0.55);
+  backdrop-filter: blur(6px);
+  padding: 32px;
+  border-radius: var(--radius-lg);
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-bold);
+  font-size: 48px;
+  color: #F4F1EC;
+  margin: 0;
+  line-height: 1.25;
+}
+
+/* One highlighted word inside the headline - a warm accent that stands out
+   against the dark overlay regardless of what the background photo looks like */
+.highlight {
+  color: #D98B5F;
+}
+
+.prog {
+  font-family: var(--font-body);
+  font-size: 19px;
+  color: #E8E5DE;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.ctaButton {
+  display: inline-block;
+  width: fit-content;
+  margin-top: 8px;
+  padding: 12px 32px;
+  background-color: #FF7A45;
+  color: #FFFFFF;
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-bold);
+  font-size: 15px;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.ctaButton:hover {
+  transform: scale(1.05);
+  background-color: #FF8F63;
+}
+
+/* Discount note - low-key, no pill/border, just icon + text under the CTA */
+.discountNote {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #C9C6C0;
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-regular);
+  font-size: 14px;
+}
+
+/* ==== Showcase (left side) - stacked cards that fade/slide between each other ==== */
+.showcase {
+  position: relative;
+  width: 280px;
+  height: 340px;
+  flex-shrink: 0;
+}
+
+.productCard {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #3A3A3C;
+  border-radius: var(--radius-lg);
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  pointer-events: none;
+}
+
+.productCard.active {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.productImage {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+.productName {
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-medium);
+  font-size: 15px;
+  color: #F4F1EC;
+}
+
+.productPrice {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: #B8B5AF;
+}
+
+/* Responsive: stack text above showcase on small screens */
+@media (max-width: 768px) {
+  .heroContent {
+    flex-direction: column-reverse;
+    padding: 40px 24px;
+    text-align: center;
+  }
+
+  .textBlock {
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .discountNote {
+    justify-content: center;
+  }
+}

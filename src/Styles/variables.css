@@ -1,0 +1,49 @@
+:root {
+  /* ==== الألوان الأساسية ==== */
+  --color-primary: #0F3D3E;         /* بترولي غامق - Navbar, عناوين, أزرار رئيسية */
+  --color-primary-light: #1B5A5B;   /* بترولي أفتح شوية - hover states */
+  --color-secondary: #C9924A;       /* نحاسي دافي - تفاصيل وهايلايت */
+  --color-secondary-light: #E0B579; /* نحاسي فاتح - hover على السيكاندري */
+
+  /* ==== الخلفيات ==== */
+  --color-background: #FAF6EF;      /* بيج فاتح جداً - خلفية الموقع */
+  --color-surface: #FFFFFF;         /* أبيض - خلفية الكروت */
+
+  /* ==== حالات خاصة ==== */
+  --color-error: #A13D2E;           /* أحمر طوبي - خصومات وتنبيهات */
+  --color-success: #2E7D4F;         /* أخضر - رسائل نجاح (إضافة للعربة مثلاً) */
+
+  /* ==== النصوص ==== */
+  --color-text-primary: #1C1C1C;    /* أسود دافي - نصوص أساسية */
+  --color-text-secondary: #6B6B6B;  /* رمادي - نصوص ثانوية */
+  --color-text-on-primary: #FAF6EF; /* نص على خلفية بترولي غامق */
+
+  /* ==== الحدود ==== */
+  --color-border: #E3DACB;
+
+  /* ==== الخطوط ==== */
+  --font-display: 'Cairo', sans-serif;         /* العناوين */
+  --font-body: 'IBM Plex Sans Arabic', sans-serif; /* النصوص العادية */
+  --font-mono: 'IBM Plex Mono', monospace;     /* الأسعار والأرقام */
+
+  /* ==== أوزان الخط ==== */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* ==== المسافات (Spacing) ==== */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+
+  /* ==== الحواف الدائرية ==== */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+
+  /* ==== الظلال ==== */
+  --shadow-sm: 0 1px 3px rgba(28, 28, 28, 0.08);
+  --shadow-md: 0 4px 12px rgba(28, 28, 28, 0.10);
+}

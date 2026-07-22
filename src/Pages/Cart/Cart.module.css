@@ -1,0 +1,112 @@
+.page {
+  background-color: var(--color-background);
+  min-height: 100vh;
+  padding: var(--space-xl) 0;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.pageTitle {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-bold);
+  font-size: 24px;
+  color: var(--color-text-primary);
+  margin: 0 0 var(--space-lg);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.summary {
+  margin-top: var(--space-xl);
+  padding: var(--space-lg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+}
+
+.totalRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+}
+
+.totalLabel {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--color-text-secondary);
+}
+
+.totalValue {
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-bold);
+  font-size: 20px;
+  color: var(--color-text-primary);
+}
+
+.checkoutButton {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-bold);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.checkoutButton:hover {
+  background-color: var(--color-primary-light);
+}
+
+/* ==== Empty state ==== */
+.emptyState {
+  max-width: 360px;
+  margin: 80px auto 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.emptyTitle {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-bold);
+  font-size: 22px;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.emptyText {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.browseButton {
+  margin-top: var(--space-sm);
+  padding: 12px 28px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-bold);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.browseButton:hover {
+  background-color: var(--color-primary-light);
+}

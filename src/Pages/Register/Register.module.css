@@ -1,0 +1,236 @@
+.page {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ==== Side panel ==== */
+.sidePanel {
+  flex: 1;
+  background-color: var(--color-primary);
+  display: none;
+}
+
+.sidePanelContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  padding: var(--space-xl);
+}
+
+.sidePanelLogo {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-bold);
+  font-size: 40px;
+  color: var(--color-text-on-primary);
+}
+
+.sidePanelTagline {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: rgba(250, 246, 239, 0.8);
+  margin-top: var(--space-sm);
+  max-width: 320px;
+}
+
+/* ==== Form panel ==== */
+.formPanel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xl) var(--space-lg);
+  background-color: var(--color-background);
+}
+
+.form {
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-bold);
+  font-size: 28px;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--space-sm);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-medium);
+  font-size: 13px;
+  color: var(--color-text-primary);
+}
+
+.input {
+  padding: 10px var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--color-text-primary);
+  outline: none;
+  width: 100%;
+}
+
+.input:focus {
+  border-color: var(--color-secondary);
+}
+
+.input:disabled {
+  background-color: var(--color-background);
+  cursor: not-allowed;
+}
+
+.passwordWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.passwordWrapper .input {
+  padding-left: 40px;
+}
+
+.togglePassword {
+  position: absolute;
+  left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+.fieldError {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--color-error);
+}
+
+/* ==== Password strength meter ==== */
+.strengthMeter {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: 2px;
+}
+
+.strengthBarTrack {
+  flex: 1;
+  height: 4px;
+  border-radius: 999px;
+  background-color: var(--color-border);
+  overflow: hidden;
+}
+
+.strengthBarFill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.25s ease, background-color 0.25s ease;
+}
+
+.strengthLabel {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+  flex-shrink: 0;
+}
+
+/* ==== Terms checkbox ==== */
+.termsRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+.termsRow input {
+  margin-top: 3px;
+}
+
+.submitButton {
+  padding: 12px;
+  border: none;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-bold);
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: var(--color-primary-light);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.googleButton {
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-medium);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.googleButton:hover {
+  background-color: var(--color-background);
+}
+
+.switchText {
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin-top: var(--space-sm);
+}
+
+.switchText a {
+  color: var(--color-secondary);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+}
+
+.switchText a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 900px) {
+  .sidePanel {
+    display: block;
+  }
+}
