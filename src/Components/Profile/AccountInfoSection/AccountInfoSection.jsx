@@ -7,7 +7,7 @@ import styles from './AccountInfoSection.module.css';
 
 function AccountInfoSection() {
   const { user, updateUser } = useAuth();
-  const { showSuccess, showError } = useToast();
+  const { showSuccess } = useToast();
 
   const [isEditing, setIsEditing] = useState(false);
   const [name, setName] = useState(user?.name || '');
