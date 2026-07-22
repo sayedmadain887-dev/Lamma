@@ -17,7 +17,7 @@ function ChangePasswordForm() {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [errors, setErrors] = useState({});
   const [isSaving, setIsSaving] = useState(false);
-  const { showSuccess, showError } = useToast();
+  const { showSuccess } = useToast();
 
   const strength = getPasswordStrength(newPassword);
 
@@ -120,7 +120,7 @@ function ChangeEmailForm() {
   const [error, setError] = useState('');
   const [isSaving, setIsSaving] = useState(false);
   const { updateUser } = useAuth();
-  const { showSuccess, showError } = useToast();
+  const { showSuccess } = useToast();
 
   const handleRequestSubmit = async (event) => {
     event.preventDefault();

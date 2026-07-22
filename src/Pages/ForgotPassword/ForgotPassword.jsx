@@ -39,7 +39,7 @@ function ForgotPassword() {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [resetErrors, setResetErrors] = useState({});
 
-  const { showSuccess, showError } = useToast();
+  const { showSuccess } = useToast();
   const navigate = useNavigate();
 
   // Countdown for OTP expiry, only while on the verify step
